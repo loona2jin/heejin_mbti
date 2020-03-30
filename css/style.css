@@ -110,6 +110,7 @@ body {
 
 .start-button:hover {
     color: #66adaf;
+    box-shadow: none;
 }
  
 
