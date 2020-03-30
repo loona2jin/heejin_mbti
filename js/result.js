@@ -78,7 +78,7 @@ var Result = function(type, percent, cnt, totalCnt){
         .attr('id', 'twitter-go')
         .attr('src', 'https://k.kakaocdn.net/dn/b8Qd3w/btqC3NKkDUm/xh592TgNdUtRM1DGRFQpOK/img.png')
         .on('click', function() {
-            var str = 'https://twitter.com/intent/tweet?hashtags=희진팬_mbti,' + strMbti + '&url=https://loona2jin.github.io/heejin_mbti/';//encodeURI();
+            var str = encodeURI('https://twitter.com/intent/tweet?hashtags=희진팬_mbti,' + strMbti + '&url=https://loona2jin.github.io/heejin_mbti/');
             location.href = str;
         })
         .appendTo('body');
