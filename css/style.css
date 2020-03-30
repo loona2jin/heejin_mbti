@@ -21,6 +21,7 @@ body {
 }
 
 #header span {
+    font-family: 'Do Hyeon', sans-serif;
     text-align: center;
     height: 100%;
     position: absolute;
@@ -32,6 +33,7 @@ body {
 }
 
 #main {
+    font-family: 'Do Hyeon', sans-serif;
     position: absolute;
     width: 100%;
     top: 7%;
