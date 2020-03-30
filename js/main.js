@@ -69,8 +69,8 @@ $(document).ready(function(){
             
             setTimeout(function(){
                 if(leftCnt < leftArr.length - 1) {
-                    leftPic.css('background-image','none').hide();
-                    rightPic.css('background-image','none').hide();
+                    //leftPic.css('background-image','none').hide();
+                    //rightPic.css('background-image','none').hide();
                     
                     createRound(leftArr[++leftCnt], rightArr[++rightCnt]);
                 } else {
@@ -161,19 +161,21 @@ $(document).ready(function(){
             
             //roundDom.attr('src', mbtiData.getRound(roundCnt));
             
-            $('<img/>').attr('src', leftData.data).on('load', function(e) {
-               $(this).remove(); 
+            //$('<img/>').attr('src', leftData.data).on('load', function(e) {
+             //  $(this).remove(); 
                leftPic                
                 .data('info', leftData)
-                .css('background-image', 'url("' + leftData.data + '")').fadeIn(500);
-            });
+                .css('background-image', 'url("' + leftData.data + '")');
+		       //.fadeIn(500);
+            //});
             
-            $('<img/>').attr('src', leftData.data).on('load', function(e) {
-               $(this).remove(); 
+            //$('<img/>').attr('src', leftData.data).on('load', function(e) {
+               //$(this).remove(); 
                rightPic
                 .data('info', rightData)
-                .css('background-image', 'url("' + rightData.data + '")').fadeIn(500);
-            });
+                .css('background-image', 'url("' + rightData.data + '")');
+		//.fadeIn(500);
+            //});
                         
             leftType.css('background-image', 'url("' + mbtiData.getTypeImg(leftData.type) + '")');
             rightType.css('background-image', 'url("' + mbtiData.getTypeImg(rightData.type) + '")');
