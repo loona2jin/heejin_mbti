@@ -33,7 +33,7 @@ var Result = function(type, percent, cnt, totalCnt){
     
     $('<div>')
         .addClass('percent-text')
-        .text('총 ' + totalCnt + '명의 참여자 중 ' + cnt + '명이 선택했습니다.')
+        .text('총 ' + totalCnt + '명의 참여자 중 ' + cnt + '명이  이 유형을 선택했습니다.')
         .appendTo(totalPan);
     
     var strMbti = '';
