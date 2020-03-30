@@ -318,7 +318,7 @@ var MbtiData = function() {
         "group": 4,
         "no": 7,
         "type": 'S',
-        "data": "https://k.kakaocdn.net/dn/doTvBB/btqC4tRllyn/J1qa1dsI9zoKYYIBl6y0QK/img.jpg"
+        "data": "https://k.kakaocdn.net/dn/crvIpL/btqC3qaKdmn/dFO6bbU5IL3ORbuGXs0ct0/img.jpg"
     }
     ];
     
