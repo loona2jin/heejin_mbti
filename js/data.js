@@ -116,6 +116,16 @@ var MbtiData = function() {
         "data": "https://k.kakaocdn.net/dn/SvKDn/btqCZ0iKDHD/7Airbr023blbNnj3NGSW50/img.jpg"
     },{
         "group": 2,
+        "no": 6,
+        "type": 'R',
+        "data": 'https://k.kakaocdn.net/dn/erqRyP/btqC5oQAzRD/oZruHPyWw1B9SHyP2RaL7K/img.gif'
+    },{
+        "group": 2,
+        "no": 7,
+        "type": 'R',
+        "data": 'https://k.kakaocdn.net/dn/vinAI/btqC48tE23m/6UGGMBTaYrEI4sKheKdIXk/img.jpg'
+    },{
+        "group": 2,
         "no": 1,
         "type": 'P',
         "data": "https://k.kakaocdn.net/dn/byew3i/btqC21HXeNq/Uzd8PpqKM6f3NYVW0FTsik/img.gif"
@@ -139,6 +149,16 @@ var MbtiData = function() {
         "no": 5,
         "type": 'P',
         "data": "https://k.kakaocdn.net/dn/d0dF1R/btqC3NI1wIF/zG33cZPXiNhjkKau803y7k/img.gif"
+    },{
+        "group": 2,
+        "no": 6,
+        "type": 'P',
+        "data": 'https://k.kakaocdn.net/dn/bVb1si/btqC3ppmJls/cpa1cUpMEThGofcSZ8g7XK/img.gif'
+    },{
+        "group": 2,
+        "no": 7,
+        "type": 'P',
+        "data": 'https://k.kakaocdn.net/dn/VG5yQ/btqC7r6TqJY/HSzQ8OcXbJ9FoS3BRmSk6k/img.jpg'
     },{
         "group": 3,
         "no": 1,
