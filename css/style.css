@@ -168,15 +168,6 @@ body {
     -moz-box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
 }
 
-.pic:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50); 
-    -ms-filter: "alpha(opacity=50)"; 
-    -khtml-opacity: 0.5; 
-    -moz-opacity: 0.5;
-    border: 2px solid black;
-}
-
 .type {
     position: absolute;
     width: 100%;
