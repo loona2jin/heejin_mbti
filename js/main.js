@@ -189,7 +189,7 @@ $(document).ready(function(){
             leftType.css('background-image', 'url("' + mbtiData.getTypeImg(leftData.type) + '")');
             rightType.css('background-image', 'url("' + mbtiData.getTypeImg(rightData.type) + '")');
             
-            progressTest.css('width', leftCnt / leftArr.length * 100 + '%');
+            progressTest.css('width', (leftCnt + 1) / leftArr.length * 100 + '%');
             /*vsDom[0].animate([
               {opacity: '1', offset: 0}, 
               {opacity: '0', offset: 0.25}, 
@@ -212,7 +212,7 @@ $(document).ready(function(){
         
         var progressTest = $('<div>')
             .addClass('test-progress')
-            .css('width', leftCnt / leftArr.length * 100 + '%')
+            .css('width', (leftCnt + 1) / leftArr.length * 100 + '%')
             .appendTo(progressState);
         
         createRound(leftArr[leftCnt], rightArr[rightCnt]);
