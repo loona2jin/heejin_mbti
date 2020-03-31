@@ -246,7 +246,7 @@ $(document).ready(function(){
     $('<div>')
         .addClass('tip')
         .append('<img src="https://static.neris-assets.com/images/test-header-2.svg">')
-        .append('<div>혹 질문이 마음에 들지 않더라도 정직하게 답변하십시오.</div>')
+        .append('<div>혹 질문이 마음에 들지 않더라도 정직(희진)하게 답변하십시오.</div>')
         .appendTo(mainTip);
         
     var buttonWrapper = $('<div>')
