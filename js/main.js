@@ -34,9 +34,8 @@ $(document).ready(function(){
                  type:"POST"
             }).always(function(jqXHR, textStatus) {
                 setTimeout(function() {
-                    query('SELECT C WHERE C = "' + submitDate + '"', '설문지 응답 시트1', 'callback_update'); 
-                    //query('SELECT B, count(B) group by B', '설문지 응답 시트1', 'callback_result');    
-                }, 1000);                
+                    query('SELECT C WHERE C = "' + submitDate + '"', '설문지 응답 시트1', 'callback_update');    
+                }, 500);                
             });
         };
         
@@ -71,7 +70,9 @@ $(document).ready(function(){
                 if(leftCnt < leftArr.length - 1) {
                     //leftPic.css('background-image','none').hide();
                     //rightPic.css('background-image','none').hide();
-                    
+                    leftSpin.show();
+                    rightSpin.show();
+		
                     createRound(leftArr[++leftCnt], rightArr[++rightCnt]);
                 } else {
                     //console.log(score);
@@ -124,6 +125,9 @@ $(document).ready(function(){
             .addClass('type')
             .appendTo(rightDom);
         
+	var leftSpin = $('<div class="spinner-block"><div class="spinner spinner-1"></div></div>').appendTo(leftPic);
+        var rightSpin = $('<div class="spinner-block"><div class="spinner spinner-1"></div></div>').appendTo(rightPic);
+	    
         var vsDom = $('<img>')
             .attr('src', 'https://k.kakaocdn.net/dn/xlftt/btqC2sTA5IA/WMVXp01Pv8931zCJHeKbJk/img.png')
             .appendTo(testBody);
@@ -161,21 +165,23 @@ $(document).ready(function(){
             
             //roundDom.attr('src', mbtiData.getRound(roundCnt));
             
-            //$('<img/>').attr('src', leftData.data).on('load', function(e) {
-             //  $(this).remove(); 
+            $('<img/>').attr('src', leftData.data).on('load', function(e) {
+               $(this).remove(); 
                leftPic                
                 .data('info', leftData)
                 .css('background-image', 'url("' + leftData.data + '")');
+		leftSpin.hide();
 		       //.fadeIn(500);
-            //});
+            });
             
-            //$('<img/>').attr('src', leftData.data).on('load', function(e) {
-               //$(this).remove(); 
+            $('<img/>').attr('src', leftData.data).on('load', function(e) {
+               $(this).remove(); 
                rightPic
                 .data('info', rightData)
                 .css('background-image', 'url("' + rightData.data + '")');
+		rightSpin.hide();
 		//.fadeIn(500);
-            //});
+            });
                         
             leftType.css('background-image', 'url("' + mbtiData.getTypeImg(leftData.type) + '")');
             rightType.css('background-image', 'url("' + mbtiData.getTypeImg(rightData.type) + '")');
