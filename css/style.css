@@ -52,16 +52,19 @@ body {
     text-align: center;
     margin: auto;
     word-break: keep-all;
-    background-color: #3c9294;
     color: #f9f9f9;
     padding: 10%;
+    background: #397fb3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, #139dba , #397fb3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, #139dba, #397fb3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #139dba, #397fb3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #139dba , #397fb3);
 }
 
 .mainText {
     width: 80%;
     margin: auto;
     word-break: keep-all;
-    background-color: #3c9294;
     color: #f9f9f9;
 }
 
