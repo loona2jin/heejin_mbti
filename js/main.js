@@ -26,6 +26,7 @@ $(document).ready(function(){
         var sendData = function() {
             $('#test').hide();
             $('#main').hide();
+	    $('#wait').show();
             submitDate = new Date();
             var allData = $.param({"entry.2102064359": resultType, "entry.1004947693": submitDate}, true);
             $.ajax({
