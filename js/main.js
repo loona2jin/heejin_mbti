@@ -70,6 +70,8 @@ $(document).ready(function(){
                 if(leftCnt < leftArr.length - 1) {
                     //leftPic.css('background-image','none').hide();
                     //rightPic.css('background-image','none').hide();
+		    leftPic.css('background-image','none');
+                    rightPic.css('background-image','none');
                     leftSpin.show();
                     rightSpin.show();
 		
