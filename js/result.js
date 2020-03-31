@@ -74,12 +74,21 @@ var Result = function(type, percent, cnt, totalCnt){
         strMbti += mbtiData.plusType[i] == type[i] ? mbtiData.getPartSet()[i][1] : mbtiData.getPartSet()[i][0];
     }
     
-    $('<img>')
+    var twitter = $('<img>')
         .attr('id', 'twitter-go')
         .attr('src', 'https://k.kakaocdn.net/dn/b8Qd3w/btqC3NKkDUm/xh592TgNdUtRM1DGRFQpOK/img.png')
         .on('click', function() {
-            var str = encodeURI('https://twitter.com/intent/tweet?hashtags=희진팬_mbti,' + strMbti + '&url=https://loona2jin.github.io/heejin_mbti/');
+            var str = encodeURI('https://twitter.com/intent/tweet?hashtags=희진팬_mbti,' + strMbti + '&url=https://loona2jin.github.io/heejin_mbti/');//encodeURI();
             location.href = str;
         })
-        .appendTo('body');
+        .appendTo(resultDom);
+    
+    twitter[0].animate([
+          {transform: 'scale3d(1, 1, 1)', offset: 0}, 
+          {transform: 'scale3d(1.05, 1.05, 1.05)', offset: 0.5}, 
+          {transform: 'scale3d(1, 1, 1)', offset: 1}],{
+            direction: 'alternate',
+            duration: 900,
+            iterations: Infinity,
+        });
 };
