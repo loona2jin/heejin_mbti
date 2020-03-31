@@ -118,7 +118,7 @@ var MbtiData = function() {
         "group": 2,
         "no": 6,
         "type": 'R',
-        "data": 'https://k.kakaocdn.net/dn/erqRyP/btqC5oQAzRD/oZruHPyWw1B9SHyP2RaL7K/img.gif'
+        "data": 'https://k.kakaocdn.net/dn/eoRb0K/btqC22zUKaJ/dhcgH5MF8b6qoxO5SCKRpk/img.gif'
     },{
         "group": 2,
         "no": 7,
@@ -278,7 +278,7 @@ var MbtiData = function() {
         "group": 4,
         "no": 6,
         "type": 'H',
-        "data": "https://k.kakaocdn.net/dn/eoRb0K/btqC22zUKaJ/dhcgH5MF8b6qoxO5SCKRpk/img.gif"
+        "data": "https://k.kakaocdn.net/dn/erqRyP/btqC5oQAzRD/oZruHPyWw1B9SHyP2RaL7K/img.gif"
     },{
         "group": 4,
         "no": 7,
