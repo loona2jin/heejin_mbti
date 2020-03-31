@@ -1,6 +1,7 @@
 var Result = function(type, percent, cnt, totalCnt){
     $('#test').hide();
     $('#main').hide();
+    $('#wait').hide();
     
     var resultDom = $('<div>')
         .attr('id', 'result')
