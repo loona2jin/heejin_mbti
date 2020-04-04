@@ -409,7 +409,7 @@ var MbtiData = function() {
         },
         'JPTS': {
             type: '휘강묶쏘',
-            desc: '전휘혈,강아지,머묶,하쏘왓이하이'
+            desc: '전휘혈,강아지,머묶,쏘왓'
         },
         'JPUH': {
             type: '휘강안하',
