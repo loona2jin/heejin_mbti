@@ -304,6 +304,13 @@ $(document).ready(function(){
 	    url += qs.join('&');
 	    return jsonp(url); // Call JSONP helper function
 	};
+	
+    $('#static-img').on('click', function() {
+        $('body').css('overflow', 'hidden');
+        var static = $('<div>').addClass('static').appendTo('body');
+                
+        query('SELECT B, count(B) group by B', '설문지 응답 시트1', 'callback_static');
+    });
 });
 
 var dep = 0;
@@ -375,4 +382,99 @@ var parse = function (data) {
         }
     }
     return result;
+};
+
+
+var callback_static = function(data) {
+    data = parse(data); // Call data parser helper function  
+
+    var col = [];
+    for (var i = 0; i < data.length; i++) {
+        for (var key in data[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+
+    var chartData = [];
+    var totalCnt = 0;
+    for(var i = 0; i < data.length; i++){
+        if(data[i][col[0]]) {
+            var d = {
+                'type': data[i][col[0]],
+                'cnt': data[i][col[1]]
+            };
+            totalCnt += data[i][col[1]];
+            chartData.push(d);
+        }
+    }
+    
+    chartData.sort(function(a, b) {
+        return a.cnt > b.cnt ? -1 : a.cnt < b.cnt ? 1 : 0;
+    })
+    
+    createChart(chartData, totalCnt);
+};
+
+var createChart = function(chartData, totalCnt) {
+    var rank_mbti = new MbtiData();    
+    var imgarr = [];
+    
+    var center = $('<div>').addClass('center').on('click', function(e) {
+        $('body').css('overflow', 'auto');
+        $('.static').hide();
+    }).appendTo('.static');
+        
+    var head = $('<div>').addClass('head-static').appendTo(center);
+    var totalCnt = $('<div>').addClass('total-cnt').text('total: ' + totalCnt).appendTo(head);
+    var close = $('<div>').addClass('close-static').appendTo(head);
+    $('<img>').attr('src', 'close.svg').on('click', function() {
+        $('body').css('overflow', 'auto');
+        $('.static').hide();
+    }).appendTo(close);
+    
+    var top3 = $('<div>').addClass('top3').on('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    }).appendTo(center);
+    var list = $('<div>').addClass('list').on('click', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    }).appendTo(center);
+    for(var i = 0; i < chartData.length; i++) {
+        var one = $('<div>').addClass('item');
+        if(i < 3) {
+            if(i == 0) {
+                one.addClass('one').appendTo(top3);
+            } else if(i == 1) {
+                one.prependTo(top3);
+            } else {
+                one.appendTo(top3);
+            }
+            var temp_type = chartData[i].type[parseInt(Math.random() * 4)];
+            var temp_img;
+            do {
+                temp_img = rank_mbti.getType(temp_type)[parseInt(Math.random() * rank_mbti.getTypeCnt(temp_type))].data;
+            } while(imgarr.indexOf(temp_img) != -1);
+            imgarr.push(temp_img);
+            $('<div>').addClass('pic-rank').css({
+                'background-image': 'url(' + temp_img + ')'
+            }).appendTo(one);
+        } else {
+            var one = $('<div>').addClass('item').appendTo(list);
+        }
+        $('<div>').addClass('pos').text(i + 1).appendTo(one);
+        $('<div>').addClass('name').text(rank_mbti.transKorea[chartData[i].type].type).appendTo(one);
+        $('<div>').addClass('desc').text(rank_mbti.transKorea[chartData[i].type].desc).appendTo(one);
+        $('<div>').addClass('score').text(chartData[i].cnt).appendTo(one);
+        
+        
+    one[0].animate([
+          {opacity: '0', transform: 'translate3d(0, -100%, 0)', offset: 0}, 
+          {opacity: '1', transform: 'none', offset: 1}],{
+              direction: 'alternate',
+              duration: 900
+            });
+    }
 };
