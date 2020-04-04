@@ -353,6 +353,73 @@ var MbtiData = function() {
         2: 'U',
         3: 'S'
     };
+        
+    this.transKorea = {
+        'MRTH': {
+            type: '맹토묶하',
+            desc: '맹꽁,토끼,묶은,하이하이'
+        },
+        'MPTH': {
+            type: '맹강묶하',
+            desc: '맹꽁,강아지,묶은,하이하이'
+        },
+        'MRUH': {
+            type: '맹토안하',
+            desc: '맹꽁,토끼,안묶은,하이하이'
+        },
+        'MRTS': {
+            type: '맹토묶쏘',
+            desc: '맹꽁,토끼,묶은,쏘왓'
+        },
+        'MPUH': {
+            type: '맹강안하',
+            desc: '맹꽁,강아지,안묶은,하이하이'
+        },
+        'MPTS': {
+            type: '맹강묶쏘',
+            desc: '맹꽁,강아지,묶은,쏘왓'
+        },
+        'MPUS': {
+            type: '맹강안쏘',
+            desc: '맹꽁,강아지,안묶은,쏘왓'
+        },
+        'MRUS': {
+            type: '맹토안쏘',
+            desc: '맹꽁,토끼,안묶은,쏘왓'
+        },
+        'JRTH': {
+            type: '휘토묶하',
+            desc: '전휘혈,토끼,묶은,하이하이'
+        },
+        'JPTH': {
+            type: '휘강묶하',
+            desc: '전휘혈,강아지,묶은,하이하이'
+        },
+        'JRUH': {
+            type: '휘토안하',
+            desc: '전휘혈,토끼,안묶은,하이하이'
+        },
+        'JRUS': {
+            type: '휘토안쏘',
+            desc: '전휘혈,토끼,안묶은,쏘왓'
+        },
+        'JPUS': {
+            type: '휘강안쏘',
+            desc: '전휘혈,강아지,안묶은,쏘왓'
+        },
+        'JPTS': {
+            type: '휘강묶쏘',
+            desc: '전휘혈,강아지,묶은,하쏘왓이하이'
+        },
+        'JPUH': {
+            type: '휘강안하',
+            desc: '전휘혈,강아지,안묶은,하이하이'
+        },
+        'JRTS': {
+            type: '휘토묶쏘',
+            desc: '전휘혈,토끼,묶은,쏘왓'
+        }
+    };
     
     this.getPartSet = function() {
         return partSet;
